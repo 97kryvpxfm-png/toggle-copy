@@ -1,0 +1,11 @@
+.ppc-copy-btn {
+    cursor: pointer;
+    opacity: 0.6;
+    margin-right: 2px;
+    transition: opacity 0.15s;
+}
+
+.ppc-copy-btn:hover {
+    opacity: 1;
+    color: var(--SmartThemeEmColor, #a0c4ff);
+}
