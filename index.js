@@ -3,7 +3,7 @@ import { getPresetManager } from "../../../preset-manager.js";
 import { callGenericPopup, POPUP_TYPE } from "../../../popup.js";
 import { openai_settings, openai_setting_names } from "../../../openai.js";
 
-const extensionName = "preset-prompt-copy";
+const extensionName = "toggle-copy";
 const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 const DUMMY_ID = 100001;
 
