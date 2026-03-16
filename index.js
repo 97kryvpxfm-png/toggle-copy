@@ -4,7 +4,6 @@ import { callGenericPopup, POPUP_TYPE } from "../../../popup.js";
 import { openai_settings, openai_setting_names } from "../../../openai.js";
 
 const extensionName = "toggle-copy";
-const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 const DUMMY_ID = 100001;
 
 // Debounced injection — wait for ST to finish re-rendering the list
@@ -147,12 +146,6 @@ function escapeHtml(str) {
     return (str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-jQuery(async () => {
-    try {
-        const settingsHtml = await $.get(`${extensionFolderPath}/settings.html`);
-        $('#extensions_settings2').append(settingsHtml);
-        setupObserver();
-    } catch (err) {
-        console.error(`[${extensionName}] ❌ Failed:`, err);
-    }
+jQuery(() => {
+    setupObserver();
 });
